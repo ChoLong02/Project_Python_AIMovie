@@ -41,7 +41,7 @@ class DaumCrawler:
                 reg_date = reply.select('span.info_append')[0].text.strip()[:10]
 
                 data = {'title': title,
-                        'score': score,
+                        'score': int(score), # 평점계산을 위해 정수형으로 변환
                         'writer': writer,
                         'content': content,
                         'reg_date': reg_date}
