@@ -37,7 +37,7 @@ from tensorflow.keras import metrics
 def read_data(filename):
     with open(filename, 'r', encoding='UTF-8') as f:
         data = [line.split('\t') for line in f.read().splitlines()]
-        data = data[1:] # id는 제외
+        data = data[1:] # 제목열 제외
     return data
 
 # nsmc 데이터를 불러와서 python 변수에 담기
